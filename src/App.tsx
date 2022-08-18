@@ -15,7 +15,9 @@ function App() {
         <h1>Tic-Tac-Toe by Eva</h1>
         <div className="play-area">
           {board.map((block, i) => (
-            <div className="block"></div>
+            <div className={block === 'X' || block === 'O'
+              ? "block occupied" : "block"
+            }></div>
           ))}
         </div>
 
